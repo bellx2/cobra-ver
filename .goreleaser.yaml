@@ -12,7 +12,9 @@ builds:
     goos:
       - darwin
     ldflags:
-      - -s -w -X github.com/bellx2/cobra-ver/cmd.version={{ .Version }}
+      - -s -w
+      - -X github.com/bellx2/cobra-ver/cmd.version={{ .Version }}
+      - -X github.com/bellx2/cobra-ver/cmd.revision={{ .Commit }}
 
 archives:
   - format: tar.gz
